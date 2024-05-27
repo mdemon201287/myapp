@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Members</title>
+</head>
+<body>
+    <h1>Members</h1>
+    <ul>
+        {% for member in mem %}
+            <li>{{ member.name }} - {{ member.subject }} - {{ member.country }} <a href="{% url 'update' member.id %}">Update</a> <a href="{% url 'delete' member.id %}">Delete</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add' %}">Add Member</a>
+    <a href="{% url 'signout' %}">Sign Out</a>
+</body>
+</html>

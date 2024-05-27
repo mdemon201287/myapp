@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Member</title>
+</head>
+<body>
+    <h1>Update Member</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" value="{{ mem.name }}"><br>
+        <label for="subject">Subject</label><br>
+        <input type="text" id="subject" name="subject" value="{{ mem.subject }}"><br>
+        <label for="country">Country</label><br>
+        <input type="text" id="country" name="country" value="{{ mem.country }}"><br>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
